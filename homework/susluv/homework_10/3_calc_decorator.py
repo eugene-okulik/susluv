@@ -1,13 +1,13 @@
 def decorated_calc(func):
     def wrapper(first, second, operation):
         if first == second:
-            return first + second
+            return func(first, second, '+')
         elif first > second:
-            return first - second
+            return func(first, second, '-')
         elif first < second:
-            return first / second
+            return func(first, second, '/')
         elif (first < 0) or (second < 0):  # unreachable?
-            return first / second
+            return func(first, second, '*')
         else:
             return func
     return wrapper
