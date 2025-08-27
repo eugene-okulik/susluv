@@ -12,7 +12,7 @@ class Book:
 
     def print_info(self):
         print(f'Название: {self.name}, Автор: {self.author}, страниц: {self.pages_total}, материал: {Book.material}'
-              f'{', зарезервирована' if self.is_reserved else ''}')
+              f'{", зарезервирована" if self.is_reserved else ""}')
 
 
 class SchoolBook(Book):
