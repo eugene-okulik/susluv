@@ -25,7 +25,7 @@ class SchoolBook(Book):
 
     def print_info(self):
         print(f'Название: {self.name}, Автор: {self.author}, страниц: {self.pages_total},  предмет: {self.subject},'
-              f' класс: {self.grade}{', зарезервирована' if self.is_reserved else ''}')
+              f' класс: {self.grade}{", зарезервирована" if self.is_reserved else ""}')
 
 
 book1 = Book('Пролетая над гнездом кукушки', 'Кен Кизи', 500, '978-5-7324-1162-3')
