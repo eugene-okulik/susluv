@@ -72,20 +72,20 @@ tulip2 = Tulip('orange', 30, 200, 'Aug 30 2025 19:05')
 
 bouquet1 = Bouquet(rose1, rose2, tulip1, tulip2)
 
-print('='*10, ' Только собрали букет', '='*10)
+print('=' * 10, ' Только собрали букет', '=' * 10)
 print(bouquet1)
 print()
 
-print('='*10, ' Сортировали по цене', '='*10)
+print('=' * 10, ' Сортировали по цене', '=' * 10)
 bouquet1.sort_by_price()
 print(bouquet1)
 print()
 
-print('='*10, ' Обратная сортировка по цене', '='*10)
+print('=' * 10, ' Обратная сортировка по цене', '=' * 10)
 bouquet1.sort_by_price(reverse=True)
 print(bouquet1)
 print()
 
-print('='*10, ' За цену от 200 до 250', '='*10)
+print('=' * 10, ' За цену от 200 до 250', '=' * 10)
 filtered_by_price = bouquet1.find_by_price(min=200, max=250)
 print(Bouquet(*filtered_by_price))
