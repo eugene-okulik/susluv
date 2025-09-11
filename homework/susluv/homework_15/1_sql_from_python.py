@@ -5,8 +5,7 @@ db = mysql.connect(
     passwd='AVNS_tegPDkI5BlB2lW5eASC',
     host='db-mysql-fra1-09136-do-user-7651996-0.b.db.ondigitalocean.com',
     port=25060,
-    database='st-onl'
-)
+    database='st-onl')
 
 cursor = db.cursor(dictionary=True)
 
@@ -21,8 +20,7 @@ cursor.executemany(
     insert_query, [
         ('50 shades of Grey', student_id),
         ('The Lord of the Rings', student_id)
-    ]
-)
+    ])
 db.commit()
 
 # создаём группу
