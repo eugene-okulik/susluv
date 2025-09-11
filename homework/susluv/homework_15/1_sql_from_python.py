@@ -20,7 +20,8 @@ cursor.executemany(
     insert_query, [
         ('50 shades of Grey', student_id),
         ('The Lord of the Rings', student_id)
-    ])
+    ]
+)
 db.commit()
 
 # создаём группу
@@ -70,13 +71,13 @@ print(cursor.fetchall())
 
 # взламываем сервер пентагона жирным джойном
 select_query = f'''
-SELECT * 
+SELECT *
 FROM students s
-JOIN `groups` g on g.id = s.group_id 
-JOIN books b on b.taken_by_student_id = s.id 
-JOIN marks m on s.id = m.student_id 
-LEFT JOIN lessons l on m.lesson_id = l.id  
-LEFT JOIN subjects sj on l.subject_id = sj.id 
+JOIN `groups` g on g.id = s.group_id
+JOIN books b on b.taken_by_student_id = s.id
+JOIN marks m on s.id = m.student_id
+LEFT JOIN lessons l on m.lesson_id = l.id
+LEFT JOIN subjects sj on l.subject_id = sj.id
 WHERE s.id = {student_id}
 '''
 cursor.execute(select_query)
