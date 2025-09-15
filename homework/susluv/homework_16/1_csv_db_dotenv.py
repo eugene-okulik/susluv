@@ -42,3 +42,5 @@ with open(file_path, 'r', encoding='utf-8') as csv_file:
     for row in file_data:
         if not is_in_db(row):
             print(row)
+
+db.close()
