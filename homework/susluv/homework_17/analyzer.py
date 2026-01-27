@@ -41,7 +41,7 @@ for file in log_files:
     result_dict[file] = file_dict
 
 if not result_dict:
-    print(Fore.RED + 'Совпадений не найдено')
+    print(Fore.RED + 'Совпадений не найдено!')
 else:
     print(Fore.RED + f'Найдено {lines_with_words_counter} совпадений в {len(result_dict)} файлах')
 
