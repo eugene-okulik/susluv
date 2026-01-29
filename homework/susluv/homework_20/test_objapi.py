@@ -47,7 +47,7 @@ def test_post_an_object(data):
     assert response.json()['name'] == data['name']
     assert response.json()['data']['color'] == data['data']['color']
     assert response.json()['data']['size'] == data['data']['size']
-    requests.delete(f"http://objapi.course.qa-practice.com/object/{response.json()['id']}")
+    requests.delete(f'http://objapi.course.qa-practice.com/object/{response.json()["id"]}')
 
 
 @pytest.mark.critical
