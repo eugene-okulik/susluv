@@ -8,7 +8,7 @@ def h_create():
             "size": "medium"
         },
         "name": "elephant"
-    },
+    }
     headers = {'Content-Type': 'application/json'}
     response = requests.post(
         'http://objapi.course.qa-practice.com/object',
@@ -41,7 +41,7 @@ def t_post_an_object():
             "size": "medium"
         },
         "name": "elephant"
-    },
+    }
     headers = {'Content-Type': 'application/json'}
     response = requests.post(
         'http://objapi.course.qa-practice.com/object',
@@ -63,7 +63,7 @@ def t_put_an_object():
             "size": "medium-UP"
         },
         "name": "elephant-UP"
-    },
+    }
     headers = {'Content-Type': 'application/json'}
     response = requests.post(
         f'http://objapi.course.qa-practice.com/object/{object_id}',
@@ -81,7 +81,7 @@ def t_patch_an_object():
     object_id = h_create()
     data = {
         "name": "elephant-UP"
-    },
+    }
     headers = {'Content-Type': 'application/json'}
     response = requests.patch(
         f'http://objapi.course.qa-practice.com/object/{object_id}',
