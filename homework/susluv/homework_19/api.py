@@ -65,7 +65,7 @@ def t_put_an_object():
         "name": "elephant-UP"
     }
     headers = {'Content-Type': 'application/json'}
-    response = requests.post(
+    response = requests.put(
         f'http://objapi.course.qa-practice.com/object/{object_id}',
         json=data,
         headers=headers
