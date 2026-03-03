@@ -49,4 +49,4 @@ class AdminUser(HttpUser):
             json={"data": {"color": "green-UP", "size": "big-UP"}, "name": "diplodocus-UP"},
             headers={'Content-Type': 'application/json'}
         )
-        self.client.delete(f'/object/{post_response.json()['id']}')
+        self.client.delete(f"/object/{post_response.json()['id']}")
