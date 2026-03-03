@@ -45,7 +45,7 @@ class AdminUser(HttpUser):
             headers={'Content-Type': 'application/json'}
         )
         self.client.put(
-            f'/object/{post_response.json()['id']}',
+            f"/object/{post_response.json()['id']}",
             json={"data": {"color": "green-UP", "size": "big-UP"}, "name": "diplodocus-UP"},
             headers={'Content-Type': 'application/json'}
         )
