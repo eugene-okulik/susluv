@@ -18,7 +18,7 @@ class RegularUser(HttpUser):
 
     def on_stop(self):
         for i in self.ids_for_get:
-            response = self.client.delete(f'/object/{i}')
+            self.client.delete(f'/object/{i}')
 
     @task(1)
     def get_all_objects(self):
